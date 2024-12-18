@@ -42,7 +42,7 @@ let creations = [
 const creationElements = creations.map((creation) => (
     `
         <div class="creations__item">
-            <img class="creations__image" src=${isMobile ? creation.mobile : creation.desktop} alt="">
+            <img class="creations__image" src=${isMobile ? creation.mobile : creation.desktop} alt="picture of ${creation.name}">
             <div class="creations__name">${creation.name}</div>
         </div>
     `
