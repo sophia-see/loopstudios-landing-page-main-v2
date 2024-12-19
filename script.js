@@ -58,3 +58,13 @@ creationContent.innerHTML = creationElements;
         item.classList.remove("active");
     })
 })
+
+let mobileMenu = document.getElementById("mobile__menu")
+
+document.getElementById("menu__open_btn").addEventListener("click", () => {
+    mobileMenu.classList.add("active")
+})
+
+document.getElementById("menu__close_btn").addEventListener("click", () => {
+    mobileMenu.classList.remove("active")
+})

@@ -313,6 +313,64 @@ li:hover:after {
     text-align: center;
 }
 
+/* MOBILE MENU */
+.mobile__menu {
+    position: fixed; /* Sticks to the viewport */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: var(--black); /* Semi-transparent background */
+    color: white; /* Text color */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    z-index: 1000; /* Ensures it appears on top of other elements */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
+}
+
+.mobile__menu.active {
+    visibility: visible; /* Show the menu */
+    opacity: 1; /* Fully opaque */
+}
+
+.mobile__menu__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 24px;
+}
+
+.mobile__links {
+    height: 100%;
+    padding: 40px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile__links ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center text */
+    font-size: 24px;
+    line-height: 25px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: 300;
+}
+
+.mobile__links ul li {
+    margin: 10px 0; /* Space between items */
+    cursor: pointer; /* Indicate clickability */
+}
+
+.mobile__links {
+    color: var(--white);
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 600px) {
     .hero__title {
