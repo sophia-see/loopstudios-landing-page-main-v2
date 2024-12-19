@@ -319,8 +319,8 @@ li:hover:after {
     top: 0; /* Aligns to the top */
     left: 0; /* Aligns to the left */
     width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    background-color: var(--black); /* Semi-transparent background */
+    height: 100dvh; /* Preferred for modern browsers */
+    height: 100vh;  /* Fallback for older browsers */    background-color: var(--black); /* Semi-transparent background */
     color: white; /* Text color */
     display: flex; /* Flexbox for centering */
     flex-direction: column; /* Stack children vertically */
@@ -373,8 +373,9 @@ li:hover:after {
 
 .no-scroll {
     overflow: hidden; /* Prevents scrolling */
-    height: 100vh; /* Locks the height */
-  }
+    height: 100dvh; /* Preferred for modern browsers */
+    height: 100vh;  /* Fallback for older browsers */
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 600px) {
