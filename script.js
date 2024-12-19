@@ -62,9 +62,11 @@ creationContent.innerHTML = creationElements;
 let mobileMenu = document.getElementById("mobile__menu")
 
 document.getElementById("menu__open_btn").addEventListener("click", () => {
-    mobileMenu.classList.add("active")
+    mobileMenu.classList.add("active");
+    document.body.classList.add('no-scroll'); // Disable scrolling
 })
 
 document.getElementById("menu__close_btn").addEventListener("click", () => {
-    mobileMenu.classList.remove("active")
+    mobileMenu.classList.remove("active");
+    document.body.classList.remove('no-scroll'); // Enable scrolling
 })
